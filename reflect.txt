@@ -1,0 +1,76 @@
+*****************************************************************************
+                               Reflection
+                             Workshop - #8
+Full Name  : Ronald Roldan
+Student ID#: 121813224
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1. Minamally a structure would need to match all the bytes it has in total depending on the declared variables and its data types.
+the bytes are as follows.
+Char = 1 byte
+Int = 4 bytes
+double = 8 bytes
+In ReportData it has in total 3 int data types and 6 double data type.	
+
+	int sku; // Stock Unit
+
+	double price; // Product Price
+
+	double weight; // weight in Pounds
+
+	double weight_kg;
+
+	int weight_g;
+
+	int calories; // Per Serving
+
+	double total_serving;
+	double cost_per_serving;
+	double calories_per_serving;
+
+3 int data type * 4 = 12 bytes
+8 double data type *8 = 36 bytes
+total bytes is 48 bytes
+
+
+Minimally it requires 48 bytes for it to work properly. in order for us to improve the passing of the functions we have to use the smallest possible data type possible.
+for example instead of using a double since it requires more bytes we can use int so that it will significantly reduce the bytes required. whole number taeks up less bytes comapred to floating numbers.
+
+2. The struct members of ReportData
+int sku; // Stock Unit
+
+	double price; // Product Price
+
+	double weight; // weight in Pounds
+
+	double weight_kg;
+
+	int weight_g;
+
+	int calories; // Per Serving
+
+	double total_serving;
+	double cost_per_serving;
+	double calories_per_serving;
+
+instead if declaring the members like we can directly use the members of CatFoodInfo to the structure for example
+
+this is the code i wrote referencing the CatFoodInfo instead of creating local variable
+does requirin a smaller bytes compared of referencing them
+the new code would be
+	struct ReportData food3 = { food.sku, food.price, weight, weight_kg, weight_g,food.calories, total_serving, cost_per_serving, calories_per_serving };
+
+another way is to remove the redundancy of ReportData since the CatfoodInfo already declares some members we can combine them into two and just combine them in one. or keep them separated but will not incldue the data's already mentioned in CatFoodInfo.
+
+Removing the CatFoodInfo redundancy
+		struct ReportData food3 =ood3.weight_kg, food3.weight_g, food3.total_serving, food3.cost_per_serving, food3.calories_per_serving);
+		printf(" %10.4lf %9d %8.1lf %7.2lf %7.5lf\n", food3.weight_kg, food3.weight_g, food3.total_serving, food3.cost_per_serving, food3.calories_per_serving);
+
+Remove CatfoodInfo Entirely and only use ReportData
+		struct ReportData food3 = { food.sku, food.price, weight, weight_kg, weight_g,food.calories, total_serving, cost_per_serving, calories_per_serving };
+
