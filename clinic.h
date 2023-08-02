@@ -1,10 +1,7 @@
 /*
 *****************************************************************************
-                        Assignment 1 - Milestone 3
-Full Name  :
-Student ID#:
-Email      :
-Section    :
+                       
+Full Name  : Ronald Roldan
 
 Authenticity Declaration:
 I declare this submission is the result of my own work and has not been
@@ -12,7 +9,6 @@ shared with any other student or 3rd party content provider. This submitted
 piece of work is entirely of my own creation.
 *****************************************************************************
 */
-
 // SAFE-GUARD: 
 // It is good practice to apply safe-guards to header files
 // Safe-guard's ensures only 1 copy of the header file is used in the project build
